@@ -1,0 +1,463 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@viewport {
+  zoom: 1.0;
+  width: device-width; }
+@-ms-viewport {
+  zoom: 1.0;
+  width: device-width; }
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quattrocento Sans', sans-serif;
+  min-width: 480px; }
+
+a {
+  -webkit-transition: background-color 0.5s, border-color 0.5s, color 0.5s, border-radius 0.25s;
+  -moz-transition: background-color 0.5s, border-color 0.5s, color 0.5s, border-radius 0.25s;
+  transition: background-color 0.5s, border-color 0.5s, color 0.5s, border-radius 0.25s; }
+
+a, a:hover, a:active, a:visited {
+  position: relative;
+  color: #65A5D1;
+  text-decoration: none;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-right: 2px;
+  margin-left: -2px;
+  margin-right: -2px; }
+
+a:hover {
+  background: #b1d1e7;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+a.titlelink {
+  color: #333; }
+
+a.titlelink:hover {
+  background: none; }
+
+a.imglink,
+a.sslink {
+  padding: 0;
+  margin: 0;
+  margin-right: 2%; }
+
+a.imglink:last-child,
+a.sslink:last-child {
+  margin-right: 0; }
+
+a.imglink:hover,
+a.sslink:hover {
+  padding: 0;
+  margin: 0;
+  margin-right: 2%;
+  background: none; }
+
+a.imglink:last-child:hover,
+a.sslink:last-child:hover {
+  margin-right: 0; }
+
+a.imglink::before,
+a.sslink::before {
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  background: rgba(255, 255, 255, 0.9);
+  border: solid 1px #ddd;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #60849D;
+  content: 'Launch website';
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-top-right-radius: 8px;
+  border-top-right-radius: 8px;
+  opacity: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
+  -moz-transition: opacity 0.25s, -moz-transform 0.25s;
+  transition: opacity 0.25s, transform 0.25s;
+  -webkit-transform: translate(0, 101%);
+  transform: translate(0, 101%); }
+
+a.imglink::before {
+  content: 'Expand'; }
+
+a.imglink:hover::before,
+a.imglink:focus::before,
+a.sslink:hover::before,
+a.sslink:focus::before {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+a.last {
+  margin-right: 0; }
+
+footer a {
+  color: #999; }
+
+footer a:hover {
+  background: none;
+  color: #65A5D1; }
+
+.headerlinks a {
+  padding: 5px 0; }
+
+.headerlinks a:hover {
+  background: none;
+  color: #65A5D1; }
+
+.headerlinks a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.25s, -webkit-transform 0.25s;
+  -moz-transition: opacity 0.25s, -moz-transform 0.25s;
+  transition: opacity 0.25s, transform 0.25s;
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  transform: translateY(5px); }
+
+.headerlinks a:hover::after,
+.headerlinks a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px); }
+
+header, section, footer {
+  padding: 0 15% 0 15%; }
+  @media screen and (max-width: 800px) {
+    header, section, footer {
+      padding: 0 3% 0 3%; } }
+  @media screen and (min-width: 1600px) {
+    header, section, footer {
+      padding: 0 20% 0 20%; } }
+  @media screen and (min-width: 2000px) {
+    header, section, footer {
+      padding: 0 25% 0 25%; } }
+
+header {
+  border-bottom: 1px solid #eee;
+  padding-top: 4em;
+  padding-bottom: 1.75em; }
+  header h1, header nav {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0; }
+  header h1 {
+    width: 50%; }
+    header h1 img {
+      vertical-align: bottom; }
+    @media screen and (max-width: 700px) {
+      header h1 {
+        width: 32%; }
+        header h1 img {
+          width: 100%; } }
+  header nav {
+    width: 50%;
+    text-align: right; }
+    @media screen and (max-width: 700px) {
+      header nav {
+        width: 68%; } }
+    header nav li {
+      float: right;
+      margin-left: 1.75em; }
+    header nav li.photolink {
+      border-left: 1px solid #ccc;
+      margin-left: 1.25em;
+      padding-left: 1.25em; }
+
+section {
+  padding-top: 40px; }
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #60849D;
+  font-size: 1.5em;
+  margin-bottom: 0.8em; }
+
+.about h1 {
+  padding-top: 1em;
+  display: inline-block;
+  max-width: 85%;
+  margin-bottom: 0.4em;
+  padding-left: 0.5em;
+  text-indent: -0.5em; }
+  .about h1 span {
+    color: #ccc;
+    font-size: 1.3em;
+    position: relative;
+    top: 3px;
+    margin: 2px; }
+  .about h1 span:first-child {
+    margin-left: 0; }
+
+/* Doesn't work in older browsers */
+cite {
+  display: inline-block;
+  font-style: italic;
+  color: #999;
+  min-width: 100px;
+  margin-bottom: 1.1em; }
+  cite span {
+    color: #ccc;
+    margin-right: 5px; }
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 0.75em;
+  border-top: 2px dotted #eee;
+  padding-top: 0.5em; }
+
+h3 {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  display: inline-block; }
+
+h3.resume_position {
+  width: 75%; }
+
+h3.resume_dates {
+  text-align: right;
+  color: #aaa;
+  font-weight: normal;
+  width: 25%; }
+
+h4 {
+  font-style: italic;
+  line-height: 1.5em;
+  color: #60849D;
+  margin-bottom: 0.5em; }
+
+em {
+  font-style: italic; }
+
+.launch {
+  width: 100%;
+  text-align: right;
+  display: block;
+  position: relative;
+  margin-top: -16px;
+  top: -14px; }
+
+footer {
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin-top: 6em;
+  margin-bottom: 4em;
+  line-height: 4em;
+  border-top: 1px solid #eee;
+  text-align: center; }
+  footer .divider {
+    letter-spacing: -1px;
+    font-size: 1.2em;
+    color: #ccc;
+    margin-left: 5px;
+    margin-right: 5px; }
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer ul li {
+      float: left;
+      margin-right: 30px; }
+
+p, ul {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #666; }
+
+p.body, ul.resume {
+  margin-bottom: 1em; }
+
+p.type {
+  padding-bottom: 0.4em;
+  margin-bottom: 0.6em;
+  border-bottom: 2px dotted #eee; }
+
+ul.role {
+  padding-left: 1em;
+  text-indent: -1em;
+  font-style: italic;
+  padding-top: 7px; }
+  ul.role li:before {
+    content: "\2022";
+    font-style: normal;
+    padding-right: 10px;
+    color: #eee;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+p.role {
+  font-style: italic; }
+
+ul.resume {
+  padding-left: 1em;
+  text-indent: -1em; }
+  ul.resume li:before {
+    content: "\2022";
+    font-style: normal;
+    padding-right: 10px;
+    color: #eee;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+
+label {
+  color: #aaa; }
+
+.screenshots {
+  margin-bottom: 1em;
+  overflow: hidden; }
+
+.description {
+  margin-bottom: 2em;
+  display: inline-block; }
+
+.moreinfo {
+  display: none; }
+
+div.col1_3, div.col2_3, div.col3_3, div.col1_2, div.col2_2 {
+  display: inline-block;
+  margin-left: 2%;
+  vertical-align: top; }
+
+div.col1_3 {
+  width: 32%; }
+
+div.col1_3:first-child {
+  margin-left: 0; }
+
+div.col2_3 {
+  width: 66%; }
+
+div.col3_3 {
+  width: 100%; }
+
+div.col1_2 {
+  width: 48%;
+  margin-left: 0; }
+
+div.col2_2 {
+  width: 48%;
+  margin-left: 4%; }
+
+img.screenshot {
+  margin-bottom: -3px;
+  width: 32%;
+  margin-left: 2%;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img.screenshot:first-child {
+  margin-left: 0; }
+
+img.feature_illustration {
+  vertical-align: bottom;
+  width: 97%;
+  margin-top: 1.5em;
+  border: 1px solid #ddd; }
+
+img.noborder {
+  border: none; }
+
+.inactive:before {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 270px;
+  background: transparent;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, transparent 25%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, transparent), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, transparent 25%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, transparent 25%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, transparent 25%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, transparent 25%, white 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to',GradientType=0 );
+  /* IE6-9 */
+  content: '';
+  z-index: 10; }
