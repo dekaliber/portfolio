@@ -109,6 +109,9 @@ a.sslink::before {
 	-webkit-transform: translate(0,101%);
 	        transform: translate(0,101%);
 }
+a.demo::before {
+	content: 'Launch demo';
+}
 a.imglink::before {
 	content: 'Expand';
 }
@@ -411,6 +414,21 @@ p.role {
 	font-style: italic;
 }
 
+ul.list {
+	padding-left: 1.5em;
+ 	text-indent: -1em;
+ 	margin-bottom: 1em;
+
+	li:before {
+		content: "\2022";
+		font-style: normal;
+		padding-right: 10px;
+		color: #eee;
+		font-size: 1.1em;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	}
+}
+
 ul.resume {
 	padding-left: 1em;
  	text-indent: -1em;
@@ -470,11 +488,19 @@ img.screenshot {
 img.screenshot:first-child {
 	margin-left: 0;
 }
+img.screenshot-single {
+	width: 100%;
+	margin-left: 0;
+}
 img.feature_illustration {
-	vertical-align: bottom;
-	width: 97%;
+	// vertical-align: bottom;
+	margin-bottom: -3px;
+	width: 100%;
 	margin-top: 1.5em;
 	border: 1px solid #ddd;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 img.noborder {
 	border: none;
