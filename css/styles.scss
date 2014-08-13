@@ -173,16 +173,20 @@ header, section, footer {
 	padding: 0 15% 0 15%;
 	// @include transition(padding, 0.5s);
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 900px) {
 		padding: 0 3% 0 3%;
 	}
 
-	@media screen and (min-width: 1600px) {
+	@media screen and (min-width: 1200px) {
 		padding: 0 20% 0 20%;
 	}
 
+	@media screen and (min-width: 1600px) {
+		padding: 0 22.5% 0 22.5%;
+	}
+
 	@media screen and (min-width: 2000px) {
-		padding: 0 25% 0 25%;
+		padding: 0 30% 0 30%;
 	}
 }
 
