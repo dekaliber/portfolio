@@ -24,6 +24,7 @@ body {
 	// font-family: 'Karla', sans-serif;
 	font-family: 'Quattrocento Sans', sans-serif;
 	min-width: 480px;
+	color: #333;
 }
 a {
 	// border-bottom: 1px solid rgba(52,73,94,0.4);
@@ -170,10 +171,10 @@ footer a:hover {
 }
 
 header, section, footer {
-	padding: 0 15% 0 15%;
+	padding: 0 10% 0 10%;
 	// @include transition(padding, 0.5s);
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 800px) {
 		padding: 0 3% 0 3%;
 	}
 
@@ -181,8 +182,12 @@ header, section, footer {
 		padding: 0 20% 0 20%;
 	}
 
-	@media screen and (min-width: 1600px) {
+	@media screen and (min-width: 1400px) {
 		padding: 0 22.5% 0 22.5%;
+	}
+
+	@media screen and (min-width: 1600px) {
+		padding: 0 25% 0 25%;
 	}
 
 	@media screen and (min-width: 2000px) {
@@ -202,22 +207,26 @@ header {
 	}
 
 	h1 {
-		// font-family: 'Lato', sans-serif;
-		// font-weight: 100;
-		// font-size: 3em;
-		// text-transform: uppercase;
-		// color: #999;
 		width: 50%;
-		// margin: 0;
 		
 		img {
 			vertical-align: bottom;
 		}
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 800px) {
 			width: 32%;
 
 			img {
 				width: 100%;
+			}
+		}
+
+		@media screen and (max-width: 640px) {
+			width: 100%;
+			clear: both;
+			text-align: center;
+
+			img {
+				width: auto;
 			}
 		}
 	}
@@ -226,15 +235,23 @@ header {
 		width: 50%;
 		text-align: right;
 
-		@media screen and (max-width: 700px) {
+		@media screen and (max-width: 800px) {
 			width: 68%;
 		}
 
-		li {
-			float: right;
-			margin-left: 1.75em;
+		@media screen and (max-width: 640px) {
+			width: 100%;
+			text-align: center;
+			margin-top: 1em;
 		}
 
+		li {
+			display: inline-block;
+			margin-left: 1.75em;
+		}
+		li:first-child {
+			margin-left: 0;
+		}
 		li.photolink {
 			border-left: 1px solid #ccc; 
 			margin-left: 1.25em; 
@@ -369,8 +386,8 @@ footer {
 		letter-spacing: -1px;
 		font-size: 1.2em;
 		color: #ccc;
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 
 	ul {
