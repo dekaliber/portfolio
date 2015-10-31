@@ -59,7 +59,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quattrocento Sans', sans-serif;
-  min-width: 480px;
+  min-width: 320px;
   color: #333; }
 
 a {
@@ -91,11 +91,19 @@ a.titlelink {
 a.titlelink:hover {
   background: none; }
 
+@media screen and (max-width: 560px) {
+  img.logo {
+    width: 60%; } }
+
 a.imglink,
 a.sslink {
   padding: 0;
   margin: 0;
   margin-right: 2%; }
+  @media screen and (max-width: 560px) {
+    a.imglink,
+    a.sslink {
+      margin-right: 0; } }
 
 a.imglink:last-child,
 a.sslink:last-child {
@@ -220,11 +228,18 @@ header {
   border-bottom: 1px solid #eee;
   padding-top: 4em;
   padding-bottom: 1.75em; }
+  @media screen and (max-width: 640px) {
+    header {
+      padding-top: 1em;
+      padding-bottom: 1em; } }
   header h1, header nav {
     display: inline-block;
     vertical-align: bottom;
     margin-bottom: 0; }
   header h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 3em;
     width: 50%; }
     header h1 img {
       vertical-align: bottom; }
@@ -254,12 +269,20 @@ header {
     header nav li {
       display: inline-block;
       margin-left: 1.75em; }
+      @media screen and (max-width: 640px) {
+        header nav li {
+          margin-left: 1.5em; } }
     header nav li:first-child {
       margin-left: 0; }
     header nav li.photolink {
       border-left: 1px solid #ccc;
       margin-left: 1.25em;
       padding-left: 1.25em; }
+      @media screen and (max-width: 640px) {
+        header nav li.photolink {
+          border: 0;
+          margin-left: 1.5em;
+          padding-left: 0; } }
 
 section {
   padding-top: 40px; }
@@ -315,12 +338,20 @@ h3 {
 
 h3.resume_position {
   width: 75%; }
+  @media screen and (max-width: 560px) {
+    h3.resume_position {
+      width: 100%; } }
 
 h3.resume_dates {
   text-align: right;
   color: #aaa;
   font-weight: normal;
   width: 25%; }
+  @media screen and (max-width: 560px) {
+    h3.resume_dates {
+      width: 100%;
+      margin: 0 0 1em;
+      text-align: left; } }
 
 h4 {
   font-style: italic;
@@ -347,6 +378,10 @@ footer {
   line-height: 4em;
   border-top: 1px solid #eee;
   text-align: center; }
+  @media screen and (max-width: 640px) {
+    footer {
+      margin-top: 3em;
+      margin-bottom: 2em; } }
   footer .divider {
     letter-spacing: -1px;
     font-size: 1.2em;
@@ -365,6 +400,10 @@ p, ul {
   font-size: 1em;
   line-height: 1.5em;
   color: #666; }
+  @media screen and (max-width: 640px) {
+    p, ul {
+      font-size: 0.95em;
+      line-height: 1.5em; } }
 
 p.body, ul.resume {
   margin-bottom: 1em; }
@@ -424,8 +463,17 @@ label {
   margin-bottom: 2em;
   display: inline-block; }
 
+div.last {
+  margin-bottom: 0; }
+
 .moreinfo {
   display: none; }
+  @media screen and (max-width: 640px) {
+    .moreinfo h3 {
+      margin-top: 0.25em; } }
+  @media screen and (max-width: 640px) {
+    .moreinfo .screenshots {
+      margin-bottom: 0.25em; } }
 
 div.col1_3, div.col2_3, div.col3_3, div.col1_2, div.col2_2 {
   display: inline-block;
@@ -434,12 +482,20 @@ div.col1_3, div.col2_3, div.col3_3, div.col1_2, div.col2_2 {
 
 div.col1_3 {
   width: 32%; }
+  @media screen and (max-width: 640px) {
+    div.col1_3 {
+      width: 100%; } }
 
 div.col1_3:first-child {
   margin-left: 0; }
 
 div.col2_3 {
   width: 66%; }
+  @media screen and (max-width: 640px) {
+    div.col2_3 {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px; } }
 
 div.col3_3 {
   width: 100%; }
@@ -460,6 +516,9 @@ img.screenshot {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+  @media screen and (max-width: 640px) {
+    img.screenshot {
+      width: 100%; } }
 
 img.screenshot:first-child {
   margin-left: 0; }
@@ -467,6 +526,11 @@ img.screenshot:first-child {
 img.screenshot-single {
   width: 100%;
   margin-left: 0; }
+
+@media screen and (max-width: 640px) {
+  a.secondary,
+  img.secondary {
+    display: none; } }
 
 img.feature_illustration {
   margin-bottom: -3px;
@@ -476,6 +540,9 @@ img.feature_illustration {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+  @media screen and (max-width: 640px) {
+    img.feature_illustration {
+      margin-top: 1em; } }
 
 img.noborder {
   border: none; }
